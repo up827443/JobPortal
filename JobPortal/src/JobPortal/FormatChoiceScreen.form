@@ -27,22 +27,22 @@
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
-                      <Component id="jButton2" min="-2" pref="132" max="-2" attributes="0"/>
+                      <Component id="BackButton" min="-2" pref="132" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
-                      <Component id="jButton1" min="-2" pref="132" max="-2" attributes="0"/>
+                      <Component id="DownloadButton" min="-2" pref="132" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace min="0" pref="80" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
-                              <Component id="jLabel1" min="-2" pref="253" max="-2" attributes="0"/>
+                              <Component id="FileFormatLabel" min="-2" pref="253" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="89" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jCheckBox2" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jCheckBox1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jCheckBox_Doc" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jCheckBox_Pdf" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="178" max="-2" attributes="0"/>
                           </Group>
@@ -56,15 +56,15 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jLabel1" min="-2" pref="35" max="-2" attributes="0"/>
+              <Component id="FileFormatLabel" min="-2" pref="35" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
-              <Component id="jCheckBox1" min="-2" max="-2" attributes="0"/>
+              <Component id="jCheckBox_Pdf" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="jCheckBox2" min="-2" max="-2" attributes="0"/>
+              <Component id="jCheckBox_Doc" min="-2" max="-2" attributes="0"/>
               <EmptySpace pref="49" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jButton1" alignment="3" min="-2" pref="58" max="-2" attributes="0"/>
-                  <Component id="jButton2" alignment="3" min="-2" pref="58" max="-2" attributes="0"/>
+                  <Component id="DownloadButton" alignment="3" min="-2" pref="58" max="-2" attributes="0"/>
+                  <Component id="BackButton" alignment="3" min="-2" pref="58" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
@@ -72,32 +72,39 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JLabel" name="jLabel1">
+    <Component class="javax.swing.JLabel" name="FileFormatLabel">
       <Properties>
         <Property name="text" type="java.lang.String" value="Choose Downloadable File Format"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JCheckBox" name="jCheckBox1">
+    <Component class="javax.swing.JCheckBox" name="jCheckBox_Pdf">
       <Properties>
         <Property name="text" type="java.lang.String" value=".pdf"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox_PdfActionPerformed"/>
+      </Events>
     </Component>
-    <Component class="javax.swing.JCheckBox" name="jCheckBox2">
+    <Component class="javax.swing.JCheckBox" name="jCheckBox_Doc">
       <Properties>
         <Property name="text" type="java.lang.String" value=".doc"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton1">
+    <Component class="javax.swing.JButton" name="DownloadButton">
       <Properties>
         <Property name="text" type="java.lang.String" value="Download"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="DownloadButtonMouseClicked"/>
+      </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton2">
+    <Component class="javax.swing.JButton" name="BackButton">
       <Properties>
         <Property name="text" type="java.lang.String" value="Back"/>
       </Properties>
       <Events>
-        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButton2MouseClicked"/>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="BackButtonMouseClicked"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BackButtonActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>
