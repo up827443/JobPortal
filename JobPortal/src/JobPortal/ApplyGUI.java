@@ -443,11 +443,11 @@ public class ApplyGUI extends javax.swing.JFrame {
     private void submitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitButtonActionPerformed
         // TODO add your handling code here:
         // Dialog box that appears when user submits application
-        if termsChkBox.isSelected() = True {
-            JOptionPane.showMessageDialog(frame, "Email has been sent to employer.");
-        } else {
-            JOptionPane.showMessageDialog(frame, "Terms and conditions have not been checked.");
-               }        
+//        if termsChkBox.isSelected() = True {
+//            JOptionPane.showMessageDialog(frame, "Email has been sent to employer.");
+//        } else {
+//            JOptionPane.showMessageDialog(frame, "Terms and conditions have not been checked.");
+//               }        
     }//GEN-LAST:event_submitButtonActionPerformed
     
     /**
