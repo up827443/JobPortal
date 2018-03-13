@@ -45,7 +45,6 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-
               <Group type="102" attributes="0">
                   <Component id="jPanel4" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="491" max="-2" attributes="0"/>
@@ -63,7 +62,6 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jPanel6" min="-2" pref="1107" max="-2" attributes="0"/>
                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-
               </Group>
           </Group>
         </DimensionLayout>
@@ -95,7 +93,6 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jobTitleLabel" min="-2" max="-2" attributes="0"/>
                       <EmptySpace pref="39" max="32767" attributes="0"/>
@@ -104,14 +101,11 @@
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-
                   <Component id="jobTitleLabel" min="-2" max="-2" attributes="0"/>
-
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-
             <Component class="javax.swing.JLabel" name="jobTitleLabel">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -124,13 +118,11 @@
         </Container>
         <Container class="javax.swing.JPanel" name="jPanel6">
 
-
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-
                           <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
                               <Component id="filetypeLabel1" alignment="0" pref="533" max="32767" attributes="0"/>
                               <Component id="careerLevel" alignment="0" max="32767" attributes="0"/>
@@ -140,20 +132,17 @@
                               <Component id="firstName" alignment="0" max="32767" attributes="0"/>
                               <Component id="firstNameLabel" alignment="0" max="32767" attributes="0"/>
                               <Component id="emailAddress" alignment="0" max="32767" attributes="0"/>
-
                           </Group>
                           <Component id="personalInfoLabel" min="-2" pref="216" max="-2" attributes="0"/>
                           <Component id="chooseCVFile" alignment="0" min="-2" pref="160" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-
                           <Group type="102" attributes="0">
                               <Component id="chooseCoverLetterFile" min="-2" pref="160" max="-2" attributes="0"/>
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
-
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="lastName" alignment="0" max="32767" attributes="0"/>
                                   <Component id="educationLevel" alignment="0" max="32767" attributes="0"/>
@@ -165,35 +154,28 @@
                                       </Group>
                                       <EmptySpace min="-2" pref="97" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
-
                                           <Group type="102" attributes="0">
                                               <Component id="postcodeLabel" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-
                                           </Group>
                                           <Component id="postcode" max="32767" attributes="0"/>
                                       </Group>
-
                                   </Group>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
-
                               <Component id="lastNameLabel" max="32767" attributes="0"/>
                               <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
-
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-
                                   <Component id="coverLetterLabel" min="-2" pref="335" max="-2" attributes="0"/>
                                   <Component id="filetypeLabel2" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="optionalLabel" min="-2" pref="219" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-
                           </Group>
                       </Group>
                   </Group>
@@ -201,7 +183,6 @@
                       <EmptySpace max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-
                               <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
                               <Component id="submitButton" min="-2" pref="173" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="120" max="-2" attributes="0"/>
@@ -250,8 +231,6 @@
                                   <Component id="postcode" pref="47" max="32767" attributes="0"/>
                                   <Component id="emailAddress" alignment="0" max="32767" attributes="0"/>
                                   <Component id="country" alignment="1" max="32767" attributes="0"/>
-
-
                               </Group>
                           </Group>
                       </Group>
@@ -262,7 +241,6 @@
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="coverLetterLabel" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
                                   <Component id="cvLabel" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
@@ -271,11 +249,9 @@
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="filetypeLabel1" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
                                   <Component id="filetypeLabel2" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
-
                               </Group>
                           </Group>
                       </Group>
-
                       <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="chooseCoverLetterFile" max="32767" attributes="0"/>
@@ -535,7 +511,6 @@
               </Events>
             </Component>
             <Component class="javax.swing.JCheckBox" name="termsChkBox">
-
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Cambria" size="14" style="0"/>
