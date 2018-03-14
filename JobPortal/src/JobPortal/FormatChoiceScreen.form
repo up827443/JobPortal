@@ -6,7 +6,7 @@
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
-    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="true"/>
   </SyntheticProperties>
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
@@ -27,6 +27,7 @@
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
+                      <Component id="CancelButton" min="-2" pref="132" max="-2" attributes="0"/>
                       <Component id="BackButton" min="-2" pref="132" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                       <Component id="DownloadButton" min="-2" pref="132" max="-2" attributes="0"/>
@@ -41,6 +42,8 @@
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="docCheckBox" min="-2" max="-2" attributes="0"/>
+                                  <Component id="pdfCheckBox" min="-2" max="-2" attributes="0"/>
                                   <Component id="jCheckBox_Doc" min="-2" max="-2" attributes="0"/>
                                   <Component id="jCheckBox_Pdf" min="-2" max="-2" attributes="0"/>
                               </Group>
@@ -58,6 +61,13 @@
               <EmptySpace max="-2" attributes="0"/>
               <Component id="FileFormatLabel" min="-2" pref="35" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
+              <Component id="pdfCheckBox" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="docCheckBox" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="49" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="DownloadButton" alignment="3" min="-2" pref="58" max="-2" attributes="0"/>
+                  <Component id="CancelButton" alignment="3" min="-2" pref="58" max="-2" attributes="0"/>
               <Component id="jCheckBox_Pdf" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="jCheckBox_Doc" min="-2" max="-2" attributes="0"/>
@@ -77,11 +87,16 @@
         <Property name="text" type="java.lang.String" value="Choose Downloadable File Format"/>
       </Properties>
     </Component>
+    <Component class="javax.swing.JCheckBox" name="pdfCheckBox">
     <Component class="javax.swing.JCheckBox" name="jCheckBox_Pdf">
       <Properties>
         <Property name="text" type="java.lang.String" value=".pdf"/>
       </Properties>
       <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="pdfCheckBoxActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JCheckBox" name="docCheckBox">
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox_PdfActionPerformed"/>
       </Events>
     </Component>
@@ -89,6 +104,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value=".doc"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="docCheckBoxActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="DownloadButton">
       <Properties>
@@ -98,11 +116,14 @@
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="DownloadButtonMouseClicked"/>
       </Events>
     </Component>
+    <Component class="javax.swing.JButton" name="CancelButton">
     <Component class="javax.swing.JButton" name="BackButton">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Back"/>
+        <Property name="text" type="java.lang.String" value="Cancel"/>
       </Properties>
       <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="CancelButtonMouseClicked"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CancelButtonActionPerformed"/>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="BackButtonMouseClicked"/>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BackButtonActionPerformed"/>
       </Events>

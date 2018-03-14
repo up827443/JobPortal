@@ -70,6 +70,12 @@ public class ApplyGUI extends javax.swing.JFrame {
         submitButton = new javax.swing.JButton();
         cancelButton = new javax.swing.JButton();
         termsChkBox = new javax.swing.JCheckBox();
+      
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jobTitleLabel.setFont(new java.awt.Font("Tahoma", 0, 60)); // NOI18N
+        jobTitleLabel.setText("Job Title");
+
         backButton = new javax.swing.JButton();
         signInLabel = new javax.swing.JLabel();
         memberLabel = new javax.swing.JLabel();
@@ -90,7 +96,6 @@ public class ApplyGUI extends javax.swing.JFrame {
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jobTitleLabel)
-
         );
 
         personalInfoLabel.setFont(new java.awt.Font("Cambria", 0, 18)); // NOI18N
@@ -109,6 +114,17 @@ public class ApplyGUI extends javax.swing.JFrame {
                 firstNameFocusGained(evt);
             }
         });
+        firstName.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                firstNameActionPerformed(evt);
+            }
+        });
+
+        lastName.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                lastNameFocusGained(evt);
+            }
+        });
 
         firstName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -122,7 +138,7 @@ public class ApplyGUI extends javax.swing.JFrame {
                 lastNameFocusGained(evt);
             }
         });
-
+      
         lastName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 lastNameActionPerformed(evt);
@@ -148,6 +164,11 @@ public class ApplyGUI extends javax.swing.JFrame {
 
         emailLabel.setFont(new java.awt.Font("Cambria", 0, 14)); // NOI18N
         emailLabel.setText("Email Address");
+        emailAddress.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                emailAddressFocusGained(evt);
+            }
+        });
 
         emailAddress.setText("emailAddress");
         emailAddress.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -155,7 +176,7 @@ public class ApplyGUI extends javax.swing.JFrame {
                 emailAddressFocusGained(evt);
             }
         });
-
+      
         emailAddress.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 emailAddressActionPerformed(evt);
@@ -165,7 +186,10 @@ public class ApplyGUI extends javax.swing.JFrame {
         countryLabel.setFont(new java.awt.Font("Cambria", 0, 14)); // NOI18N
         countryLabel.setText("Country ");
         countryLabel.setToolTipText("");
-
+      
+        postcodeLabel.setFont(new java.awt.Font("Cambria", 0, 14)); // NOI18N
+        postcodeLabel.setText("Postcode");
+      
         postcodeLabel.setFont(new java.awt.Font("Cambria", 0, 14)); // NOI18N
         postcodeLabel.setText("Postcode");
 
@@ -183,7 +207,43 @@ public class ApplyGUI extends javax.swing.JFrame {
                 postcodeFocusGained(evt);
             }
         });
+      
+        cvLabel.setFont(new java.awt.Font("Cambria", 0, 14)); // NOI18N
+        cvLabel.setText("Your CV");
 
+        filetypeLabel1.setFont(new java.awt.Font("Cambria", 0, 14)); // NOI18N
+        filetypeLabel1.setText("Supported file types: doc, docx, pdf, rtf, txt. (Max size: 5MB)");
+
+        chooseCVFile.setFont(new java.awt.Font("Cambria", 0, 14)); // NOI18N
+        chooseCVFile.setLabel("Choose File");
+
+        coverLetterLabel.setFont(new java.awt.Font("Cambria", 0, 14)); // NOI18N
+        coverLetterLabel.setText("Add Cover Letter ");
+
+        chooseCoverLetterFile.setFont(new java.awt.Font("Cambria", 0, 14)); // NOI18N
+        chooseCoverLetterFile.setLabel("Choose File");
+
+        filetypeLabel2.setFont(new java.awt.Font("Cambria", 0, 14)); // NOI18N
+        filetypeLabel2.setText("Supported file types: doc, docx, pdf, rtf, txt. (Max size: 5MB)");
+
+        optionalLabel.setFont(new java.awt.Font("Cambria", 0, 14)); // NOI18N
+        optionalLabel.setText("Optional ");
+
+        submitButton.setFont(new java.awt.Font("Cambria", 0, 14)); // NOI18N
+        submitButton.setText("Submit ");
+        submitButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                submitButtonActionPerformed(evt);
+            }
+        });
+
+        cancelButton.setFont(new java.awt.Font("Cambria", 0, 14)); // NOI18N
+        cancelButton.setText("Cancel ");
+        cancelButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cancelButtonActionPerformed(evt);
+            }
+        });
 
         cvLabel.setFont(new java.awt.Font("Cambria", 0, 14)); // NOI18N
         cvLabel.setText("Your CV");
@@ -222,7 +282,6 @@ public class ApplyGUI extends javax.swing.JFrame {
             }
         });
 
-
         termsChkBox.setFont(new java.awt.Font("Cambria", 0, 14)); // NOI18N
         termsChkBox.setText("By continuing you agree to Job Portal's Privacy Policy, Terms of Use and use of cookies.");
 
@@ -243,7 +302,6 @@ public class ApplyGUI extends javax.swing.JFrame {
                         .addComponent(emailAddress, javax.swing.GroupLayout.Alignment.LEADING))
                     .addComponent(personalInfoLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(chooseCVFile, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
-
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel6Layout.createSequentialGroup()
@@ -258,18 +316,15 @@ public class ApplyGUI extends javax.swing.JFrame {
                                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(countryLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 158, Short.MAX_VALUE)
                                     .addComponent(country))
-
                                 .addGap(97, 97, 97)
                                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel6Layout.createSequentialGroup()
                                         .addComponent(postcodeLabel)
                                         .addGap(0, 0, Short.MAX_VALUE))
-
                                     .addComponent(postcode))))
                         .addContainerGap())
                     .addGroup(jPanel6Layout.createSequentialGroup()
                         .addComponent(lastNameLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-
                         .addGap(25, 25, 25))
                     .addGroup(jPanel6Layout.createSequentialGroup()
                         .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -288,13 +343,13 @@ public class ApplyGUI extends javax.swing.JFrame {
                         .addComponent(cancelButton, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(termsChkBox, javax.swing.GroupLayout.PREFERRED_SIZE, 807, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(82, 82, 82))
-
-
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addComponent(personalInfoLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+
+                .addGap(18, 18, 18)
 
                 .addGap(18, 18, 18)
 
@@ -344,12 +399,17 @@ public class ApplyGUI extends javax.swing.JFrame {
                     .addComponent(chooseCVFile, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
 
-
                 .addComponent(termsChkBox, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(submitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(cancelButton, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
+
+                .addGap(212, 212, 212))
+        );
+
+        chooseCVFile.getAccessibleContext().setAccessibleName("");
+
 
                 .addGap(212, 212, 212))
 
@@ -378,6 +438,9 @@ public class ApplyGUI extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
 
+                .addGap(274, 854, Short.MAX_VALUE))
+
+
                 .addGap(491, 491, 491)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
@@ -396,6 +459,11 @@ public class ApplyGUI extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(0, 0, 0)
+
+                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(32, 32, 32)
+                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, 610, javax.swing.GroupLayout.PREFERRED_SIZE))
+
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -415,8 +483,11 @@ public class ApplyGUI extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
+
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 1133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+              .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -426,7 +497,47 @@ public class ApplyGUI extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+
+    private void cancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelButtonActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+    }//GEN-LAST:event_cancelButtonActionPerformed
+
+    private void submitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitButtonActionPerformed
+        // TODO add your handling code here:
+        // Dialog box that appears when user submits application
+
+        if (termsChkBox.isSelected()) {
+            JOptionPane.showMessageDialog(null, "Email has been sent to employer.");
+            this.setVisible(false);
+        } else {
+            JOptionPane.showMessageDialog(null, "Terms and conditions have not been checked.");
+        }
+    }//GEN-LAST:event_submitButtonActionPerformed
+
+    private void emailAddressActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailAddressActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_emailAddressActionPerformed
+
+    private void careerLevelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_careerLevelActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_careerLevelActionPerformed
+
+    private void lastNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lastNameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lastNameActionPerformed
+
+    private void firstNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_firstNameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_firstNameActionPerformed
+
+    
+    // Clears text fields when they are focused on
+    private void firstNameFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_firstNameFocusGained
+        // TODO add your handling code here:
 
     private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonActionPerformed
         // TODO add your handling code here:
@@ -474,6 +585,7 @@ public class ApplyGUI extends javax.swing.JFrame {
     // Clears text fields when they are focused on
     private void firstNameFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_firstNameFocusGained
         // TODO add your handling code here:
+
         if (firstName.getText().equals("firstName")) {
             firstName.setText("");
         }         
