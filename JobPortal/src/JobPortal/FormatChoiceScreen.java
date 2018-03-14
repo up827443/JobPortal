@@ -41,23 +41,28 @@ public class FormatChoiceScreen extends javax.swing.JFrame {
     private void initComponents() {
 
         FileFormatLabel = new javax.swing.JLabel();
-        jCheckBox_Pdf = new javax.swing.JCheckBox();
-        jCheckBox_Doc = new javax.swing.JCheckBox();
+        pdfCheckBox = new javax.swing.JCheckBox();
+        docCheckBox = new javax.swing.JCheckBox();
         DownloadButton = new javax.swing.JButton();
-        BackButton = new javax.swing.JButton();
+        CancelButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         FileFormatLabel.setText("Choose Downloadable File Format");
 
-        jCheckBox_Pdf.setText(".pdf");
-        jCheckBox_Pdf.addActionListener(new java.awt.event.ActionListener() {
+        pdfCheckBox.setText(".pdf");
+        pdfCheckBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox_PdfActionPerformed(evt);
+                pdfCheckBoxActionPerformed(evt);
             }
         });
 
-        jCheckBox_Doc.setText(".doc");
+        docCheckBox.setText(".doc");
+        docCheckBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                docCheckBoxActionPerformed(evt);
+            }
+        });
 
         DownloadButton.setText("Download");
         DownloadButton.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -66,15 +71,15 @@ public class FormatChoiceScreen extends javax.swing.JFrame {
             }
         });
 
-        BackButton.setText("Back");
-        BackButton.addMouseListener(new java.awt.event.MouseAdapter() {
+        CancelButton.setText("Cancel");
+        CancelButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                BackButtonMouseClicked(evt);
+                CancelButtonMouseClicked(evt);
             }
         });
-        BackButton.addActionListener(new java.awt.event.ActionListener() {
+        CancelButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BackButtonActionPerformed(evt);
+                CancelButtonActionPerformed(evt);
             }
         });
 
@@ -86,7 +91,7 @@ public class FormatChoiceScreen extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(BackButton, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(CancelButton, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(DownloadButton, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap())
@@ -98,8 +103,8 @@ public class FormatChoiceScreen extends javax.swing.JFrame {
                                 .addGap(89, 89, 89))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jCheckBox_Doc)
-                                    .addComponent(jCheckBox_Pdf))
+                                    .addComponent(docCheckBox)
+                                    .addComponent(pdfCheckBox))
                                 .addGap(178, 178, 178))))))
         );
         layout.setVerticalGroup(
@@ -108,41 +113,40 @@ public class FormatChoiceScreen extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(FileFormatLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(54, 54, 54)
-                .addComponent(jCheckBox_Pdf)
+                .addComponent(pdfCheckBox)
                 .addGap(18, 18, 18)
-                .addComponent(jCheckBox_Doc)
+                .addComponent(docCheckBox)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(DownloadButton, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(BackButton, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(CancelButton, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void BackButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BackButtonMouseClicked
+    private void CancelButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CancelButtonMouseClicked
         // TODO add your handling code here:
         this.setVisible(false);
-        new DownloadScreen().setVisible(true);
-    }//GEN-LAST:event_BackButtonMouseClicked
+    }//GEN-LAST:event_CancelButtonMouseClicked
 
-    private void jCheckBox_PdfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox_PdfActionPerformed
-         
-        if (jCheckBox_Pdf.isSelected()){
-            jCheckBox_Doc.setSelected(false);
-        
+    private void pdfCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pdfCheckBoxActionPerformed
+        // TODO add your handling code here:
+        if (pdfCheckBox.isSelected()){
+            docCheckBox.setSelected(false);
         }
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox_PdfActionPerformed
+        
+    }//GEN-LAST:event_pdfCheckBoxActionPerformed
 
-    private void BackButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackButtonActionPerformed
+    private void CancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CancelButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_BackButtonActionPerformed
+    }//GEN-LAST:event_CancelButtonActionPerformed
 
     private void DownloadButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DownloadButtonMouseClicked
-       
-        if (jCheckBox_Pdf.isSelected()){
+        // TODO add your handling code here:   
+        if (pdfCheckBox.isSelected()){
             
             Document doc = new Document ();
             try{
@@ -170,7 +174,7 @@ public class FormatChoiceScreen extends javax.swing.JFrame {
            }
             System.out.println("Pdf created sucessfully");
     }                                        
-        else if (jCheckBox_Doc.isSelected()) {
+        else if (docCheckBox.isSelected()) {
     try{
           
             FileOutputStream out = new FileOutputStream (new File ("Job Specification.Doc"));
@@ -192,11 +196,20 @@ public class FormatChoiceScreen extends javax.swing.JFrame {
             
         }catch(Exception e){
             System.out.println(e);
-        }
+            }
         System.out.println("Doc has been created successfully");
         
-    } // TODO add your handling code here:
+        } 
+        pdfCheckBox.setSelected(false);
+        docCheckBox.setSelected(false);
     }//GEN-LAST:event_DownloadButtonMouseClicked
+
+    private void docCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_docCheckBoxActionPerformed
+        // TODO add your handling code here:
+        if (docCheckBox.isSelected()){
+            pdfCheckBox.setSelected(false);
+        }
+    }//GEN-LAST:event_docCheckBoxActionPerformed
                                                  
           // TODO add your handling code here:
         
@@ -205,8 +218,8 @@ public class FormatChoiceScreen extends javax.swing.JFrame {
          
     private void jCheckBox_DocActionPerformed(java.awt.event.ActionEvent evt) {                                              
         // TODO add your handling code here:
-        if (jCheckBox_Doc.isSelected())
-            jCheckBox_Pdf.setSelected(false);
+        if (docCheckBox.isSelected())
+            pdfCheckBox.setSelected(false);
     }                                             
     
     /**
@@ -245,10 +258,10 @@ public class FormatChoiceScreen extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton BackButton;
+    private javax.swing.JButton CancelButton;
     private javax.swing.JButton DownloadButton;
     private javax.swing.JLabel FileFormatLabel;
-    private javax.swing.JCheckBox jCheckBox_Doc;
-    private javax.swing.JCheckBox jCheckBox_Pdf;
+    private javax.swing.JCheckBox docCheckBox;
+    private javax.swing.JCheckBox pdfCheckBox;
     // End of variables declaration//GEN-END:variables
 }
