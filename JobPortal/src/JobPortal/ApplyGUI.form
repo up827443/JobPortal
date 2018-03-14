@@ -6,7 +6,7 @@
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
-    <SyntheticProperty name="generateCenter" type="boolean" value="true"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
   </SyntheticProperties>
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
@@ -25,11 +25,7 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-
-              <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
-
               <Component id="jPanel3" min="-2" pref="1133" max="-2" attributes="0"/>
-
               <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
@@ -52,11 +48,6 @@
 
               <Group type="102" attributes="0">
                   <Component id="jPanel4" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="274" pref="854" max="32767" attributes="0"/>
-
-
-              <Group type="102" attributes="0">
-                  <Component id="jPanel4" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="491" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
@@ -67,7 +58,6 @@
                       <Component id="backButton" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="274" max="-2" attributes="0"/>
-
               </Group>
               <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
@@ -81,10 +71,6 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-
-                  <Component id="jPanel4" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="3" attributes="0">
@@ -97,7 +83,6 @@
                       <Component id="jPanel4" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-
                   <Component id="jPanel6" min="-2" pref="610" max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -121,7 +106,6 @@
               <Group type="103" groupAlignment="0" attributes="0">
 
                   <Component id="jobTitleLabel" min="-2" max="-2" attributes="0"/>
-                  <Component id="jobTitleLabel" min="-2" max="-2" attributes="0"/>
 
               </Group>
             </DimensionLayout>
@@ -139,6 +123,7 @@
           </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="jPanel6">
+
 
           <Layout>
             <DimensionLayout dim="0">
@@ -184,14 +169,6 @@
                                           <Group type="102" attributes="0">
                                               <Component id="postcodeLabel" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                          </Group>
-                                          <Component id="postcode" max="32767" attributes="0"/>
-                                      </Group>
-
-
-                                          <Group type="102" attributes="0">
-                                              <Component id="postcodeLabel" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
 
                                           </Group>
                                           <Component id="postcode" max="32767" attributes="0"/>
@@ -202,13 +179,6 @@
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
-
-                              <Component id="lastNameLabel" max="32767" attributes="0"/>
-                              <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-
 
                               <Component id="lastNameLabel" max="32767" attributes="0"/>
                               <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
@@ -281,6 +251,7 @@
                                   <Component id="emailAddress" alignment="0" max="32767" attributes="0"/>
                                   <Component id="country" alignment="1" max="32767" attributes="0"/>
 
+
                               </Group>
                           </Group>
                       </Group>
@@ -300,10 +271,6 @@
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="filetypeLabel1" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
                                   <Component id="filetypeLabel2" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                      </Group>
-
 
                               </Group>
                           </Group>
@@ -352,12 +319,9 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="firstName">
-
-
               <Properties>
                 <Property name="text" type="java.lang.String" value="firstName"/>
               </Properties>
-
               <Events>
                 <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="firstNameFocusGained"/>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="firstNameActionPerformed"/>
@@ -571,6 +535,7 @@
               </Events>
             </Component>
             <Component class="javax.swing.JCheckBox" name="termsChkBox">
+
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Cambria" size="14" style="0"/>

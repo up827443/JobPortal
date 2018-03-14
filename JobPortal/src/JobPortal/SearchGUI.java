@@ -123,11 +123,12 @@ public class SearchGUI extends javax.swing.JFrame {
 
         searchFrame.setVisible(true);
 
-        signInButton.setFont(new java.awt.Font("Cambria", 1, 18)); // NOI18N
-        signInButton.setText("Search:");
+        signInButton.setFont(new java.awt.Font("Cambria", 0, 14)); // NOI18N
+        signInButton.setText("Sign in");
         signInButton.setAlignmentY(0.0F);
 
         searchTextField.setFont(new java.awt.Font("Cambria", 0, 14)); // NOI18N
+        searchTextField.setText("Search");
         searchTextField.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 searchTextFieldFocusGained(evt);
@@ -383,7 +384,6 @@ public class SearchGUI extends javax.swing.JFrame {
         );
 
         pack();
-        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void germanyCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_germanyCheckBoxActionPerformed

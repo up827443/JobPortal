@@ -77,17 +77,8 @@ public class DownloadScreen extends javax.swing.JFrame {
         Job_Description = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        jobTitle.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
-        jobTitle.setText("Job Title Here");
 
-        uploadBtn.setText("Upload CV and apply for a job");
-        uploadBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                uploadBtnActionPerformed(evt);
-            }
-        });
 
-        downloadBtn.setText("Download Job Specification");
         jobTitle.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
 
         jobTitle.setText("Job Title Here");
@@ -101,6 +92,7 @@ public class DownloadScreen extends javax.swing.JFrame {
 
 
         downloadBtn.setText("Download Job Specification");
+
         downloadBtn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 downloadBtnMouseClicked(evt);
@@ -109,42 +101,6 @@ public class DownloadScreen extends javax.swing.JFrame {
 
         jobTypeLabel.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jobTypeLabel.setText("Job Type:");
-        jobSalaryLabel.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jobSalaryLabel.setText("Salary:");
-
-        applyByDateLabel.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        applyByDateLabel.setText("Apply By:");
-
-        descriptionLabel.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        descriptionLabel.setText("Job Description:");
-
-        jobType.setEditable(false);
-
-        salary.setEditable(false);
-
-        applyByDate.setEditable(false);
-
-        locationLabel.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        locationLabel.setText("Location:");
-
-        location.setEditable(false);
-
-        jobSectorLabel.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jobSectorLabel.setText("Job Sector:");
-
-        jobSector.setEditable(false);
-
-        closeBtn.setText("Close");
-        closeBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                closeBtnActionPerformed(evt);
-            }
-        });
-
-        companyNameLabel.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        companyNameLabel.setText("Company Name:");
-
-        companyName.setEditable(false);
 
         jobSalaryLabel.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jobSalaryLabel.setText("Salary:");
@@ -183,6 +139,7 @@ public class DownloadScreen extends javax.swing.JFrame {
         companyNameLabel.setText("Company Name:");
 
         companyName.setEditable(false);
+
 
         Job_Description.setEditable(false);
 
@@ -193,7 +150,6 @@ public class DownloadScreen extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
 
                 .addGap(30, 30, 30)
-                .addGap(30, 30, 30)
 
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -202,8 +158,9 @@ public class DownloadScreen extends javax.swing.JFrame {
                         .addComponent(location, javax.swing.GroupLayout.PREFERRED_SIZE, 489, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jobSectorLabel)
+
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+
                         .addComponent(jobSector, javax.swing.GroupLayout.PREFERRED_SIZE, 489, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jobSalaryLabel)
@@ -211,6 +168,7 @@ public class DownloadScreen extends javax.swing.JFrame {
                         .addComponent(salary, javax.swing.GroupLayout.PREFERRED_SIZE, 489, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(applyByDateLabel)
                                 .addGap(0, 85, Short.MAX_VALUE))
@@ -230,15 +188,6 @@ public class DownloadScreen extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
                         .addComponent(companyName, javax.swing.GroupLayout.PREFERRED_SIZE, 489, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jobTypeLabel)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jobType, javax.swing.GroupLayout.PREFERRED_SIZE, 489, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(companyNameLabel)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
-                        .addComponent(companyName, javax.swing.GroupLayout.PREFERRED_SIZE, 489, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
                         .addComponent(closeBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(uploadBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -249,12 +198,14 @@ public class DownloadScreen extends javax.swing.JFrame {
                 .addGap(279, 279, 279)
                 .addComponent(jobTitle)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jobTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -262,15 +213,18 @@ public class DownloadScreen extends javax.swing.JFrame {
                             .addComponent(companyName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(companyNameLabel))
                         .addGap(225, 225, 225)
+
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(applyByDateLabel)
                             .addComponent(applyByDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
+
                         .addGap(45, 45, 45)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jobTypeLabel)
                             .addComponent(jobType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(30, 30, 30)
+
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jobSectorLabel)
                             .addComponent(jobSector, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -278,6 +232,7 @@ public class DownloadScreen extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jobSalaryLabel)
                             .addComponent(salary, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+
                 .addGap(48, 48, 48)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Job_Description, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -291,16 +246,16 @@ public class DownloadScreen extends javax.swing.JFrame {
                     .addComponent(closeBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(uploadBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(downloadBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(36, Short.MAX_VALUE))
                 .addContainerGap(35, Short.MAX_VALUE))
+
         );
 
         pack();
-        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void downloadBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_downloadBtnMouseClicked
         // TODO add your handling code here:
+        this.setVisible(false);
         new FormatChoiceScreen().setVisible(true);
     }//GEN-LAST:event_downloadBtnMouseClicked
 
